@@ -1,10 +1,9 @@
 ﻿@{
     ViewData["Title"] = "About";
 }
-<h3>@ViewData["Message"]</h3>
-<p>hello @(Model.AccessToken)</p>
+
 <div class="container">
-    <div class="row">
+    <div class="row" id="sliderdiv">
         <div class="col-md-7 col-md-offset-5">
             <h4> What-If Analysis</h4>
             <div id="slider">
@@ -14,7 +13,7 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-            <div style="margin-top:15px">
+            <div style="margin-top: 15px;">
                 <div id="reportContainer"></div>
             </div>
         </div>
@@ -45,7 +44,8 @@
             });
 
             (function () {
-                var embedToken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2ZXIiOiIwLjIuMCIsImF1ZCI6Imh0dHBzOi8vYW5hbHlzaXMud2luZG93cy5uZXQvcG93ZXJiaS9hcGkiLCJpc3MiOiJQb3dlciBCSSBOb2RlIFNESyIsIndjbiI6InBiaWUtdHdzMDEiLCJ3aWQiOiI5NDU5ZjM1Zi1iMjI0LTRmYmQtOGJjYS01NDZlNjQ4ODEzZmYiLCJyaWQiOiI3MzFjOWNjYy1mYjY4LTQ2ZmUtYTkwNC02MTMyNDhhMzZiYWUiLCJuYmYiOjE0ODQwOTM2MDMsImV4cCI6MTQ4NDA5NzIwM30.iT7csonci-zDKAbuhLhI3F-uzI4-jWsWlUtAnmWHkHU';
+                //var embedToken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2ZXIiOiIwLjIuMCIsImF1ZCI6Imh0dHBzOi8vYW5hbHlzaXMud2luZG93cy5uZXQvcG93ZXJiaS9hcGkiLCJpc3MiOiJQb3dlciBCSSBOb2RlIFNESyIsIndjbiI6InBiaWUtdHdzMDEiLCJ3aWQiOiI5NDU5ZjM1Zi1iMjI0LTRmYmQtOGJjYS01NDZlNjQ4ODEzZmYiLCJyaWQiOiI3MzFjOWNjYy1mYjY4LTQ2ZmUtYTkwNC02MTMyNDhhMzZiYWUiLCJuYmYiOjE0ODQwOTM2MDMsImV4cCI6MTQ4NDA5NzIwM30.iT7csonci-zDKAbuhLhI3F-uzI4-jWsWlUtAnmWHkHU';
+                var embedToken = '@(Model.AccessToken)';
                 var reportId = '731c9ccc-fb68-46fe-a904-613248a36bae';
                 var embedUrl = 'https://embedded.powerbi.com/appTokenReportEmbed?reportId=' + reportId;
 
