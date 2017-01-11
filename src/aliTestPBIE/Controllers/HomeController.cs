@@ -10,10 +10,21 @@ namespace aliTestPBIE.Controllers
     public class HomeController : Controller
     {
         private IConfigurationRoot _config;
+        private string workspaceCollection;
+        private string workspaceId;
+        private string accessKey;
+        private string apiUrl;
+        private string reportId;
 
         public HomeController(IConfigurationRoot config)
         {
             _config = config;
+
+            workspaceCollection = _config["PowerBI:WorkspaceCollection"];
+            workspaceId = _config["PowerBI:WorkspaceId"];
+            accessKey = _config["PowerBI:AccessKey"];
+            apiUrl = _config["PowerBI:ApiUrl"];
+            reportId = _config["PowerBI:ReportId"];
         }
         public IActionResult Index()
         {
@@ -23,7 +34,7 @@ namespace aliTestPBIE.Controllers
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
-            ViewBag.AccessKey = _config["PowerBI:accessKey"];
+            ViewBag.AccessKey = accessKey;
 
             return View();
         }

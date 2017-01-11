@@ -1,9 +1,8 @@
 ﻿@{
     ViewData["Title"] = "About";
 }
-<h2>@ViewData["Title"].</h2>
 <h3>@ViewData["Message"]</h3>
-<p>hello world</p>
+<p>@ViewBag.AccessKey</p>
 <div class="container">
     <div class="row">
         <div class="col-md-7 col-md-offset-5">
@@ -46,7 +45,7 @@
             });
 
             (function () {
-                var embedToken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2ZXIiOiIwLjIuMCIsImF1ZCI6Imh0dHBzOi8vYW5hbHlzaXMud2luZG93cy5uZXQvcG93ZXJiaS9hcGkiLCJpc3MiOiJQb3dlciBCSSBOb2RlIFNESyIsIndjbiI6InBiaWUtdHdzMDEiLCJ3aWQiOiI5NDU5ZjM1Zi1iMjI0LTRmYmQtOGJjYS01NDZlNjQ4ODEzZmYiLCJyaWQiOiI3MzFjOWNjYy1mYjY4LTQ2ZmUtYTkwNC02MTMyNDhhMzZiYWUiLCJuYmYiOjE0ODQwNjIyNjMsImV4cCI6MTQ4NDA2NTg2M30.rDaOgQNjiKhsWfTVBDIJdRUiuejVqfc-P-SoXF_rgQo';
+                var embedToken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2ZXIiOiIwLjIuMCIsImF1ZCI6Imh0dHBzOi8vYW5hbHlzaXMud2luZG93cy5uZXQvcG93ZXJiaS9hcGkiLCJpc3MiOiJQb3dlciBCSSBOb2RlIFNESyIsIndjbiI6InBiaWUtdHdzMDEiLCJ3aWQiOiI5NDU5ZjM1Zi1iMjI0LTRmYmQtOGJjYS01NDZlNjQ4ODEzZmYiLCJyaWQiOiI3MzFjOWNjYy1mYjY4LTQ2ZmUtYTkwNC02MTMyNDhhMzZiYWUiLCJuYmYiOjE0ODQwOTM2MDMsImV4cCI6MTQ4NDA5NzIwM30.iT7csonci-zDKAbuhLhI3F-uzI4-jWsWlUtAnmWHkHU';
                 var reportId = '731c9ccc-fb68-46fe-a904-613248a36bae';
                 var embedUrl = 'https://embedded.powerbi.com/appTokenReportEmbed?reportId=' + reportId;
 
