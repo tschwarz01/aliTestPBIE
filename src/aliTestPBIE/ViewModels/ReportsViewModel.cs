@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.PowerBI.Api.V1.Models;
 
-namespace aliTestPBIE.Models
+namespace aliTestPBIE.ViewsModels
 {
     public class ReportsViewModel
     {

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web;
 using Microsoft.PowerBI.Api.V1.Models;
 
-namespace aliTestPBIE.Models
+namespace aliTestPBIE.ViewModels
 {
     public class ReportViewModel
     {

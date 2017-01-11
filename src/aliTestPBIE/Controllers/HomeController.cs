@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using Microsoft.PowerBI.Security;
+using aliTestPBIE.ViewModels;
 
 namespace aliTestPBIE.Controllers
 {
@@ -36,7 +38,16 @@ namespace aliTestPBIE.Controllers
             ViewData["Message"] = "Your application description page.";
             ViewBag.AccessKey = accessKey;
 
-            return View();
+            var embedToken = PowerBIToken.CreateReportEmbedToken(workspaceCollection, workspaceId, reportId);
+            var jwt = embedToken.Generate(accessKey);
+
+            var viewModel = new ReportKeyViewModel
+            {
+                AccessToken = jwt
+            };
+
+
+            return View(viewModel);
         }
 
         public IActionResult Contact()

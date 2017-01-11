@@ -6,10 +6,6 @@
     <RuntimeIdentifier>win7-x86</RuntimeIdentifier>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="wwwroot\Models\ReportsViewModel.cs" />
-    <Compile Include="wwwroot\Models\ReportViewModel.cs" />
-  </ItemGroup>
-  <ItemGroup>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="Microsoft.CSharp" />
@@ -28,6 +24,7 @@
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.0.0" />
     <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="1.0.0" />
     <PackageReference Include="Microsoft.PowerBI.Api" Version="1.1.4" />
+    <PackageReference Include="Microsoft.PowerBI.Core" Version="1.1.4" />
     <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink.Loader" Version="14.0.0" />
   </ItemGroup>
 </Project>
